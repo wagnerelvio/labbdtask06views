@@ -1,0 +1,16 @@
+CREATE TABLE Employees (
+EmployeeID SERIAL PRIMARY KEY,
+EmployeeName VARCHAR(50),
+last_name VARCHAR(50),
+sexo char(1) not null CHECK ( sexo IN ('M', 'F') ) ,
+birthday DATE,
+email  VARCHAR(50), 
+create_date DATE,
+last_update DATE,
+cargo VARCHAR(100),
+salario DECIMAL(20,2),
+cidade  VARCHAR(50),
+DepartmentID INT,
+CONSTRAINT fk_department
+FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
