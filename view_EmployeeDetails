@@ -1,0 +1,5 @@
+-----
+CREATE VIEW EmployeeDetails AS
+SELECT e.EmployeeID, e.EmployeeName, d.DepartmentName
+FROM Employees e
+JOIN Departments d ON e.DepartmentID = d.DepartmentID
